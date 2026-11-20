@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="es">
 <head>
+  <script>
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  function irArriba(){ window.scrollTo({top:0, left:0, behavior:'instant'}); }
+  window.addEventListener('load', irArriba);
+  window.addEventListener('pageshow', irArriba);
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Andén Cero</title>
